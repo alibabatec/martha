@@ -1,0 +1,37 @@
+@mixin font($font-size,$font-family,$color) {
+  color: $color;
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+@mixin padding-top($paddingtop) {
+  padding-top: $paddingtop;
+}
+@mixin padding-bottom($paddingbottom) {
+  padding-bottom: $paddingbottom;
+}
+@mixin padding-left($paddingleft) {
+  padding-left: $paddingleft;
+}
+@mixin padding-right($paddingright) {
+  padding-top: $paddingright;
+}
+@mixin padding-all($padding-top,$padding-right,$padding-bottom,$padding-left) {
+  padding-top:$padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+

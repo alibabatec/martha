@@ -1,0 +1,123 @@
+<div class="row container__mrg--top schdeule--wrapper">
+  <div class="col col-sm-12 col-md-12 schedule-container">
+      <div class="mrgn--0 border-solid--bottom">
+          <div class="offboard--heading">{{'schedule.scheduleTitle' | translate}}</div>
+          <div class="offboard--headimg"><img src="assets/img/schedule.png" width="40" class="" alt="Schedule"/></div>
+          <div class="clearfix"></div>
+     
+</div>
+<div class="row schedule--details">
+  <div class="col-sm-12 col-md-12">
+      <div class="offboard--innertxt">
+          <ng-container *ngIf="isShow">
+          <span>{{'schedule.scheduleDate' | translate}}</span>
+          <b>{{startMonth}}</b><span>{{'schedule.scheduleTo' | translate}}</span><b>{{expiryMonth}}</b>
+          </ng-container>
+      </div>
+  </div>
+  <div class="col-sm-12 col-md-12">
+    <div class="schedule--table" [ngClass]="clsPropety()">
+      <ul class="schedule--ul">
+        <li class="schedule--li">
+            <label class="card--label"> {{'tvLicencenumberLbl' | translate}}</label>
+            <b class="card--value"> {{licenceNo}}</b>
+        </li>
+        <li class="schedule--li">
+            <label class="card--label"> {{'schedule.scheduleTotalPaidLbl' | translate}}</label>
+            <b class="card--value"><b class="currecny--space">£</b>{{totalPaidtoDate}}</b>
+        </li>
+          <li class="schedule--li">
+            <label class="card--label"> {{'schedule.scheduleYourArrearsLbl' | translate}}</label>
+            <b class="card--value value--color"> <b class="currecny--space">£</b>{{arrearsBy}}</b>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  </div>
+ 
+      <div class="col col-sm-12 col-md-12 payhistory-container">        
+          <div class="col col-sm-12 col-md-12 accord accord-activemob">
+            <div class="accord-header" [appAccordion]="true">
+                <div class="pay--header">
+                    <div  class="offboard--heading ">{{'schedule.schedulePayHistoryHeading' | translate}}</div>
+                    <a href="javascript:void(0)" class="offboard--headimg inner-payimg anchor--div">
+                        <img class="img-full showimg"  [src]='imgSrc' alt="Up Arrow">
+                    </a>
+                    <div class="clearfix"></div>
+          </div>
+            </div>
+            <div class="accord-content show">
+              <div class="trans--label">{{'schedule.scheduleLastTranscn' | translate}}</div>
+              <div class="accord-block">
+                  <div class="table-responsive">
+                  <table class="table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th class="thead--th">{{'schedule.schedulePayDateLbl' | translate}}</th>
+                          <th class="thead--th">{{'schedule.schedulePayAmountLbl' | translate}}</th>
+                          <th class="thead--th">{{'schedule.schedulePayTypeLbl' | translate}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <ng-container *ngIf="show || noData">
+                        <tr  *ngFor="let row of tableData; trackBy: trackById; let i= index;">                         
+                          <td class="tbody--td">{{row[0].formattedValue}}</td>                                                   
+                          <td class="tbody--td"><b class="currecny--space">£</b>{{row[2].formattedValue}}</td> 
+                          <td class="tbody--td">{{row[1].formattedValue}}</td>                                                  
+                        </tr>
+                        </ng-container>
+                        <ng-container *ngIf="!show || !noData">
+                           <tr><td class="text-center" colspan="3"><span class="lbl--nodata">{{'noData' | translate}}</span></td></tr>
+                        </ng-container>              
+                      </tbody>
+                    </table>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-sm-12 col-md-12 accord ">
+              <div class="accord-header" [appAccordion]="true">
+                  <div class="pay--header">
+                      <div  class="offboard--heading">{{'schedule.scheduleFutureHeading' | translate}}</div>
+                      <a href="javascript:void(0)" class="offboard--headimg inner-payimg anchor--div">
+                          <img class="img-full showimg"  src='assets/img/down_arrow.png' alt="Down Arrow">
+                      </a>
+                      <div class="clearfix"></div>
+                 
+            </div>
+              </div>
+              <div class="accord-content expand">
+                <div class="accord-block ">
+                  <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-light">
+                          <tr>
+                            <th class="future--th">{{'schedule.schedulePayDateLbl' | translate}}</th>
+                            <th class="future--th">{{'schedule.schedulePayAmountLbl' | translate}}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <ng-container *ngIf="show || noDataA">
+                            <tr *ngFor="let rowsecond of tableDataSeceond;trackBy: trackById;">                          
+                              <td class="future--td">{{rowsecond[0].formattedValue}}</td>  
+                              <td class="future--td"><b class="currecny--space">£</b>{{rowsecond[1].formattedValue}}</td>                        
+                            </tr>
+                          </ng-container>
+                          <ng-container *ngIf="!show || !noDataA">
+                           <tr><td class="text-center" colspan="2"><span class="lbl--nodata">{{'noData' | translate}}</span></td></tr>
+                         </ng-container>  
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+        </div>
+       <div class="pay--action">
+         <button class="btn-common" routerLink="/pay">{{'makePayBtn' | translate}}</button>
+       </div>
+</div>
+

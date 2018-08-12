@@ -1,0 +1,86 @@
+<div class="view-licence-content section__print" id="section-to-print">
+  <div class="view-licence-title">
+    <div class="row">
+      <h2 class="view-licence-head col-12 col-sm-8">{{'licence.heading' | translate}}</h2>
+      <div class="view-licence-image col-12 col-sm-4">
+        <img src="assets/img/TV_licence_logo.jpg" class="img-fluid float-sm-right" alt="TV Licensing Logo"/>
+      </div>
+    </div>
+  </div>
+  <div class="content-container">
+    <address class="address-para">
+              <address>{{licenceHolderName}}</address>
+              <address>{{addressLine1}}</address>
+              <address>{{addressLine2}}</address>
+              <address>{{addressLine3}}</address>
+              <address>{{addressLine4}}</address>
+              <address>{{addressLine5}}</address>
+              <address>{{gqePostCode}}</address>
+    </address>
+    <div class="licence-details form-group col-12">
+      <div class="input-container">
+        <div class="row padding">
+          <label class="input-label col-12 col-sm-6">{{'tvLicencenumberLbl' | translate}}</label>
+          <div class=" col-12 col-sm-6"><input type="text" name="" class="input-box input-box-text" readonly="readonly" value="{{licenceNo}}"/></div>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="row padding">
+          <label class="input-label col-12 col-sm-6">{{'tvLicencefeeLbl' | translate}}</label>
+          <div class=" col-12 col-sm-6"><input type="text" name="" class="input-box input-box-text" readonly="readonly" value="£{{licenceFee}}"/></div>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="row padding">
+          <label class="input-label col-12 col-sm-6">{{'tvLicencevalidUntilLbl' | translate}}</label>
+          <div class=" col-12 col-sm-6"><input type="text" name="" class="input-box input-box-text" readonly="readonly" value="{{validUntil}}"/></div>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="row padding">
+          <label class="input-label col-12 col-sm-6">{{'tvLicencetypeLbl' | translate}}</label>
+          <div class=" col-12 col-sm-6"><input type="text" name="" class="input-box input-box-text" readonly="readonly" value="{{tvLicenceType}}"/></div>
+        </div>
+      </div>
+      <div class="input-container">
+        <div class="row padding">
+          <label class="input-label col-12 col-sm-6">{{'tvLicencerecieveLbl' | translate}}</label>
+          <div class=" col-12 col-sm-6"><input type="text" name="" class="input-box input-box-text" readonly="readonly" value="{{recieveTvLicence}}"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="licence-text">
+      {{'licence.msg' | translate}}
+    </div>
+    <div class="licence-btn">
+      <button class="btn-common btn-active" name="download" (click)="download()">{{'downloadBtn' | translate}}</button>
+      <button [appHide]="['safari', 'ie', 'edge']" class="btn-common margin-left-10 visibility" name="print" (click)="print()">{{'printBtn' | translate}}</button>
+      <button [appHide]="['chrome', 'firefox']" class="btn-common margin-left-10 visibility" name="print" (click)="printPage()">{{'printBtn' | translate}}</button>
+    </div>
+  </div>
+  <div id="forPrint">
+    <div class="terms--bold">{{'pdfTermsandConditionsTitle'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTvLicenceAbout'| translate}}</div>
+    <div class="pdftitle--txt">{{'pdfTermsandConditionsTitle1'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle1MessageA'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle1MessageB'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle1MessageC'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle2'| translate}}</div>
+    <ul class="edge--fromat--ul">
+      <li class="edge--fromat--li"><div>{{'pdfTermsandConditionsTitle2MessageA'| translate}}</div></li>
+      <li class="edge--fromat--li"><div>{{'pdfTermsandConditionsTitle2MessageB'| translate}}</div></li>
+      <li class="edge--fromat--li"><div>{{'pdfTermsandConditionsTitle2MessageC'| translate}}</div></li>
+    </ul>
+    <div class="pdftitle--txt">{{'pdfTermsandConditionsTitle3'| translate}}</div>
+    <ul class="edge--fromat--ul">
+      <li class="edge--fromat--li"><div>{{'pdfTermsandConditionsTitle3MessageA'| translate}}</div></li>
+      <li class="edge--fromat--li"><div>{{'pdfTermsandConditionsTitle3MessageB'| translate}}</div></li>
+    </ul>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle3MessageC'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle3MessageD'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle4'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle4MessageA'| translate}}</div>
+    <div class="normaltext--pdf">{{'pdfTermsandConditionsTitle4MessageB'| translate}}</div>
+  </div>
+</div>
+

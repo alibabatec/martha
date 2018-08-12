@@ -1,0 +1,54 @@
+<div class="registration--wrapper">
+  <div class="reglarge--heading">
+    <div class="reg--border">
+    {{'registration.largeHead' | translate}}
+    </div>
+  </div>
+   <div class="row">
+     <div class="col-md-12">
+       <div class="journey--wrapper">
+         <div class="journey--circle">
+           <!-- registration steps -->
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-md-12">
+       <div class="form--wrapper">
+          <form #otpForm="ngForm">
+           <div class="form-row">
+              <div class="form-group col-md-12">
+                {{'registration.otp.sent.title' | translate}}
+              </div>
+              <div class="form-group col-md-12">
+                  {{'registration.otp.sent.message' | translate}}
+                </div>
+           <div class="form-group col-md-12">
+             <label class="text--lbl" for="PINCode">{{'registration.otp' | translate}}</label><span class="asteric">*</span>
+             
+             <div class="input-group">               
+                  <input class="form-control input--focus width--full pdgn__lft--34" id="otpdigit1" name="otpdigit1" type="text"  [(ngModel)]="otpdigit1" #PINdigit1="ngModel" [mask]="mask" required  autocomplete="off"/>
+                  <input class="form-control input--focus width--full pdgn__lft--34" id="otpdigit2" name="otpdigit2" type="text" [(ngModel)]="otpdigit2"  #PINdigit2="ngModel"   [mask]="mask"  required  autocomplete="off"/>
+                  <input class="form-control input--focus width--full pdgn__lft--34" id="otpdigit3" name="otpdigit3" type="text" [(ngModel)]="otpdigit3"   #PINdigit3="ngModel"  [mask]="mask"  required  autocomplete="off"/>
+                  <input class="form-control input--focus width--full pdgn__lft--34" id="otpdigit4" name="otpdigit4" type="text" [(ngModel)]="otpdigit4"    #PINdigit4="ngModel" [mask]="mask" required  autocomplete="off"/>
+                  <input class="form-control input--focus width--full pdgn__lft--34" id="otpdigit5" name="otpdigit5" type="text" [(ngModel)]="otpdigit5"    #PINdigit5="ngModel"  [mask]="mask" required  autocomplete="off"/>
+                  <input class="form-control input--focus width--full pdgn__lft--34" id="otpdigit6" name="otpdigit6" type="text" [(ngModel)]="otpdigit6"    #PINdigit6="ngModel"  [mask]="mask"  required  autocomplete="off"/>
+             </div>
+             
+           </div>
+            <div class="form-group col-md-12">
+                <div *ngIf="otpForm.invalid && (otpForm.dirty || otpForm.touched)" class="error--fields">
+                    {{'registration.otp.invalid' | translate}}
+                </div>
+            </div>
+           
+         <div class="form-group col-md-12">
+           <div class="btn-with--icon"><button type="submit" class="btn-common" routerLink="/registeration/success">{{'registration.btn' | translate}}</button><div class="img__right--arrow"></div></div>
+         </div>
+      </div>
+   </form>
+       </div>
+     </div>
+   </div>
+</div>

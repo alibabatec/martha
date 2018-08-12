@@ -1,0 +1,118 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+@import "./src/scss/font";
+
+.forgot-licence-heading {
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  font-size: $font-size-14;
+  margin: 10px 0 10px;
+}
+
+.bold {
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  font-size: $font-size-14;
+}
+
+.content-container {
+  background: $color-white;
+  padding: 0 25px;
+  min-height: 465px;
+}
+
+.forgot-licence-content {
+  font-family: $font-gotham-book;
+  padding: 5px;
+  position: relative;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+.forgot-licence-title {
+  border-bottom: 1px solid #dcedcb;
+  padding: 10px 0;
+}
+
+.forgot-licence-image {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
+
+.forgot-licence-image img {
+  width: 62px;
+}
+
+.forgot-licence-head {
+  display: inline-block;
+  width: 80%;
+  color: $color-blue-standard;
+  margin-top: 10px;
+  font-size: $font-size-22;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.login-link {
+  @include font($font-size-14, $font-gotham-book, $color-green-standard);
+  border-bottom: solid 1px #014a6f;
+  color: #014a6f;
+  display: inline;
+  margin-top: 20px;
+  outline: none;
+  padding-bottom: 2px;
+  text-decoration: none;
+  font-family: $font-gotham-book;
+  font-weight: 700;
+}
+.underline--anchor{
+   color: #014a6f;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 4px;
+}
+.href--links{
+    color: #014a6f;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 4px;
+}
+  .simple--link{
+    color: #014a6f;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 4px;
+}
+//***********************for media query*****************************//
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .content-container {
+    min-height: 810px;
+  }
+  .forgot-licence-head {
+    width: 75%;
+  }
+  .forgot-licence-content {
+    margin-top: 20px;
+  }
+  .login-link {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+
+}
+
+@media screen and (min-width: 960px) and (max-width: 1366px) {
+
+}

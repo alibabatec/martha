@@ -1,0 +1,649 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+
+
+.heading--small {
+  color: $color-white;
+  font-size: $font-size-24;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  padding-left: 46px;
+  margin-top: 22px;
+}
+
+:host /deep/ .call-div {
+  display: none;
+}
+
+:host /deep/ .footer-abs {
+  position: absolute;
+  width: 100%;
+}
+
+.containerdesk {
+  padding: 60px 0;
+}
+
+.img-elemnt {
+  width: 140px;
+  margin-top: -56px;
+}
+
+.loginLftPanel {
+  border-right: 1px solid #e4f1d5;
+  position: relative;
+  padding: 30px 50px;
+  background:url(/assets/img/6BBXT.jpg) no-repeat;
+  height:500px;
+}
+
+.img__right--securelogin {
+  background: url(/assets/img/secure_login_ic.png) no-repeat;
+  width: 35px;
+  height: 38px;
+}
+
+.loginForm {
+  padding: 30px 7.5%;
+}
+
+.logbtn-mob {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.alert-danger {
+ width:75% !important;
+}
+
+.loginLftPanel h1 {
+  color: $color-blue-standard;
+  font-size: $font-size-24;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  padding-bottom: 5px;
+  padding-left: 46px;
+  padding-top: 5px;
+}
+
+.loginLftPanel a {
+  color:$color-white;
+  /*padding-left: 46px;*/
+  text-decoration: none;
+}
+
+.loginLftPanel p {
+  padding-left: 46px;
+}
+
+.pound {
+  position: relative;
+  text-align: center;
+  padding-right: 16%;
+}
+
+.loginForm h1 {
+  color: $color-black-standard;
+  font-size: $font-size-24;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+}
+
+.loginForm label {
+  display: block;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  font-size: $font-size-14;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.loginForm input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 40px;
+}
+
+.loginForm a {
+  color: $color-blue-standard;
+  font-size: $font-size-14;
+  padding: 0px !important;
+  text-decoration: underline;
+}
+
+.loginForm p {
+  margin-bottom: 0px !important;
+}
+
+.img-info {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.singIn {
+  background: #014b6e;
+  border: 0px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.btn-primary {
+  background: $color-green-standard;
+  border: 0 none;
+  font-weight: 700;
+  width: 100%;
+}
+
+.anchor--link {
+  @include font($font-size-14, Arial, $color-green-standard);
+  text-decoration: underline;
+}
+
+.form-control {
+  border-color: #666666;
+}
+
+.heading--large {
+  @include font($font-size-14, $font-gotham-bold, #333);
+  font-weight: 700;
+}
+
+.md-float-rit {
+  float: right !important;
+}
+
+.md-float-lft {
+  float: left !important;
+}
+
+:host /deep/ .container {
+  padding: 65px;
+}
+
+.innerlolg-container {
+  background: $color-white;
+  padding: 45px 0;
+}
+
+.btn-common {
+  padding: 8px 7px;
+  min-width: 176px;
+  border-radius: 20px;
+  color:$color-white;
+}
+
+.register--btn{
+  background: transparent;
+  width:176px;
+  font-weight:100;
+}
+
+
+.width100 {
+  width: 100%;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.padbot15 {
+  padding-bottom: 15px;
+}
+
+.alert-msg {
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.line-break {
+  white-space: pre-line;
+}
+
+.signInBtnDisabled {
+  opacity: .7;
+  cursor: default;
+  &:hover{
+    box-shadow: none;
+    border: 1px solid #004b6d;
+    color: #fff;
+    background: #004b6d;
+  }
+}
+.help-ln-d{
+    z-index: 1;
+    cursor: pointer;
+    margin-left: -492px;
+    margin-top: 38px;
+}
+.help-nm-d{
+    z-index: 1;
+    cursor: pointer;
+    margin-left: -492px;
+    margin-top: 10px;
+}
+.help-ln-img{
+  width: 791px;
+}
+.help-nm-img{
+  width: 791px;
+}
+
+/********************media query start****************************/
+
+/*iPhone 6 Portrait*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+ .help-ln-d {
+        width: 256px;
+        margin-top: 11px;
+        height: 605px;
+    }
+    .help-nm-d {
+            width: 256px;
+            margin-top: 11px;
+            height: 460px;
+          }    
+    }
+
+/*iPhone 6 landscape*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) { 
+      .help-ln-d{
+          width: 464px;
+          height: 1080px;
+          margin-top: 10px;
+    }
+    .help-nm-d{
+            width: 464px;
+            height: 835px;
+            margin-top: 10px;
+          }
+    }
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+     
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+     .loginLftPanel{
+          .heading--small{
+            padding-left: 0;
+          }
+        }
+        .helpimg__not--mob{
+  display: none;
+}
+.help-ln-d{
+      width: 280px;
+      margin-top: 11px;
+      height: 656px;
+    }
+    .help-nm-d{
+            width: 280px;
+            margin-top: 11px;
+            height: 500px;
+          }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+         .loginForm label{
+             display: block;
+             width: 100%;
+         }
+        .loginLftPanel{
+          .heading--small{
+            padding-left: 0;
+          }
+        }
+        .helpimg__not--mob{
+  display: none;
+}
+.help-ln-d {
+    width: 512px;
+    height: 1185px;
+    margin-top: 10px;
+  }
+
+  .help-nm-d {
+    width: 512px;
+    height: 915px;
+    margin-top: 10px;
+  }
+  .help-ln-img{
+            width: 512px;
+          }
+  .help-nm-img{
+            width: 512px;
+          }
+}
+
+/* ----------- iPhone X ----------- */
+
+@media screen and (min-width: 320px) and (max-width: 413px) {
+  .loginLftPanel{
+          .heading--small{
+            padding-left: 0;
+          }
+        }
+      
+  .help-ln-d {
+    margin-left: 0px;
+    z-index: 1;
+    background: url(/assets/img/help_ln_m.png) no-repeat;
+    background-size: 100% auto;
+    width: 256px;
+    height: 605px;
+    margin-top: 10px;
+  }
+
+  .help-nm-d {
+    margin-left: 0px;
+    z-index: 1;
+    background: url("/assets/img/help_nm_m.png") no-repeat;
+    background-size: 100% auto;
+    width: 256px;
+    height: 460px;
+    margin-top: 10px;
+  }
+  .help-ln-img{
+            width: 250px;
+          }
+  .help-nm-img{
+            width: 250px;
+          }
+  :host /deep/ .container-mob {
+    padding: 0;
+  }
+
+  .loginForm label {
+    font-size: $font-size-12;
+  }
+
+  .md-float-rit, .md-float-lft {
+    float: none;
+  }
+
+  .paddingLft65 {
+    padding-left: 0px !important;
+  }
+
+  .padding65 {
+    padding: 15px 15px 0 15px !important;
+  }
+
+  .container-mob {
+    margin-left: -10px;
+    padding: 5px 0 5px 10px;
+    margin-top: 15px;
+  }
+
+  .lftpanle-imgmob {
+    display: none;
+  }
+
+  .loginLftPanel {
+    border-top: 10px solid #e4f1d5;
+    padding: 5px 25px 40px 28px;
+    background:url(/assets/img/6BBXT.jpg) no-repeat;
+  }
+
+  .loginLftPanel h1 {
+    padding-left: 0px;
+  }
+
+  .loginLftPanel a {
+    padding-left: 0px;
+    text-decoration: none;
+  }
+
+  .loginLftPanel p {
+    padding-left: 0px;
+  }
+
+  .pound {
+    margin-top: 0;
+    position: relative;
+    text-align: center;
+    left: 0;
+    margin-left: 0;
+    padding: 0 0 35px 0;
+  }
+
+  .innerlolg-container {
+    padding: 0;
+  }
+
+  .img-elemnt {
+    width: 80px;
+    margin-top: -33px;
+  }
+
+  .img-info {
+    width: 25px;
+    height: auto;
+    margin-top: 6px;
+    margin-left: -10px;
+  }
+
+  .loginForm a {
+    font-size: 12px;
+  }
+.helpimg__not--mob{
+  display: none;
+}
+}
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  .loginLftPanel{
+          .heading--small{
+            padding-left: 0;
+          }
+        }
+  .help-ln-d {
+    margin-left: 0px;
+    z-index: 1;
+    background: url(/assets/img/help_ln_m.png) no-repeat;
+    background-size: 100% auto;
+  }
+
+  .help-nm-d {
+    margin-left: 0px;
+    z-index: 1;
+    background: url("/assets/img/help_nm_m.png") no-repeat;
+    background-size: 100% auto;
+  }
+
+  :host /deep/ .container-mob {
+    padding: 0;
+  }
+
+  .loginForm label {
+    font-size: $font-size-12;
+  }
+
+  .md-float-rit, .md-float-lft {
+    float: none;
+  }
+
+  .paddingLft65 {
+    padding-left: 0px !important;
+  }
+
+  .padding65 {
+    padding: 15px 15px 0 15px !important;
+  }
+
+  .container-mob {
+    margin-left: -10px;
+    padding: 5px 0 5px 10px;
+    margin-top: 15px;
+  }
+
+  .lftpanle-imgmob {
+    display: none;
+  }
+
+  .loginLftPanel {
+    border-top: 10px solid #e4f1d5;
+    padding: 5px 25px 40px 28px;
+    background:url(/assets/img/6BBXT.jpg) no-repeat;
+  }
+
+  .loginLftPanel h1 {
+    padding-left: 0px;
+  }
+
+  .loginLftPanel a {
+    padding-left: 0px;
+    text-decoration: none;
+  }
+
+  .loginLftPanel p {
+    padding-left: 0px;
+  }
+
+  .pound {
+    margin-top: 0;
+    position: relative;
+    text-align: center;
+    left: 0;
+    margin-left: 0;
+    padding: 0 0 35px 0;
+  }
+
+  .innerlolg-container {
+    padding: 0;
+  }
+
+  .img-elemnt {
+    width: 80px;
+    margin-top: -33px;
+  }
+
+  .img-info {
+    width: 25px;
+    height: auto;
+    margin-top: 6px;
+    margin-left: -10px;
+  }
+
+  .loginForm a {
+    font-size: 12px;
+  }
+.helpimg__not--mob{
+  display: none;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .loginLftPanel{
+          .heading--small{
+            padding-left: 0;
+          }
+        }
+  .containerdesk {
+    padding: 48px 0;
+  }
+  .innerlolg-container {
+    padding: 0 0;
+  }
+
+  .img-elemnt {
+    width: 70px;
+    margin-top: -29px;
+  }
+
+  .pound {
+    padding-right: 18%;
+  }
+
+}
+
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+  .pound {
+    padding-right: 24%;
+  }
+  .logbtn-mob {
+    float: right;
+    margin-top: 0;
+    margin-right: 15px;
+  }
+
+  .btn-common {
+    padding: 8px 7px;
+  }
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+  .help-ln-d{
+    margin-left: -420px;
+    margin-top: 10px;
+  }
+    .help-ln-img{
+      width:630px;
+    }
+    .help-nm-d{
+      margin-left: -420px;
+    margin-top: 10px;
+    }
+  .help-nm-img{
+      width:630px;
+    }
+ }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+
+}
+
+
+
+

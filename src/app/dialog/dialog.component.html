@@ -1,0 +1,30 @@
+<div class="bg" *ngIf="show" (click)="emitAction();">
+  <div class=" container content" [ngClass]="{'dialog--samll': first, 'dialog--privacy': privacyBtn}">
+    <div class="modal--header">
+    <div class="modal--heading"><h3 class="heading--large" [ngClass]="{'error':title=='Error'}">{{title | translate}}</h3></div>
+    <div class="modal--img">
+      <a href="javascript:void(0)" class="moda--cross">
+       <img  src="assets/img/crosscircle.png" (click)="emitAction()" class="img-full" alt="Cross"/>
+      </a>
+    </div>
+    </div>
+    <div class="modal--container">
+    <div class="modal--text">{{para | translate}}</div>
+    <div class="modal--para">
+      {{message | translate}}<a [href]="urlPrivacy()" target="_blank" class="privlink" *ngIf="privacyBtn">{{'privLink' | translate}}</a>
+    </div>
+    <div class="modal--msg">
+      <h1 class="msg--heading">{{paymsgBefore | translate}}<span class="pay--value">{{payamount}}</span><span>{{paymsgAfter | translate}}</span></h1>
+      <!-- <div class="pay--value">{{payamount}}</div> -->
+    </div>
+  </div>
+ <div class="modal--action">
+   <input type="button" *ngIf="logBtn"  class="common--actbtn disp--inblock" value="{{'btnYes' | translate}}" (click)="logOut()" [autofocus]='logBtn'>
+   <input type="button" *ngIf="logBtn" class="common--actbtn disp--inblock" value="{{'btnNo' | translate}}" (click)="close()">
+   <input type="button" *ngIf="makeApay" class="btn-common disp--inblock" value="{{'makePayBtn' | translate}}" (click)="emitAction()" routerLink="/pay">
+   <input type="button" *ngIf="privacyBtn"  class="common--actbtn disp--inblock privcbtn--mob privacy--btn" style="margin-right:12px;padding:4px 14px;border:2px solid transparent" value="{{'btnPrivacy' | translate}}" (click)="emitAction();onNavigate()" [autofocus]='privacyBtn'>
+   <input type="button" *ngIf="privacyBtn" class="common--actbtn disp--inblock privacy--btn" style="padding:4px 20px;border:2px solid transparent" value="{{'btnContinue' | translate}}" (click)="close()">
+  </div>
+  </div>
+</div>
+

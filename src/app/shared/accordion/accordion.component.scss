@@ -1,0 +1,118 @@
+@import "../../../scss/config";
+@import "../../../scss/mixins";
+@import "../../../scss/font";
+.tel--anchor {
+    color: #004b6d;
+    font-size: 16px;
+    border-bottom: 1px solid #004b6d;
+    padding-bottom: 0px;
+    &:hover{
+      text-decoration:none;
+    }
+}
+.accordion{
+  background-color: white;
+}
+.accordion .heading{
+  color: $color-blue-standard;
+  font-size: $font-size-24;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+}
+.accordionTitle {
+  color: #444;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 15px 0 0 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+
+}
+.accorIcon{
+  margin-top: -7px;
+  font-size: 24px;
+  width: 20px;
+}
+.accordionItem{
+  width:100%;
+  border-bottom: 1px solid #a1bdc9;
+  &:last-child{
+      border:0 none;
+  }
+}
+.panel {
+  padding: 0 20px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  /*border-bottom: 1px solid #a1bdc9;*/
+}
+.panel--para {
+    margin-bottom: 0px;
+    line-height: 29px;
+}
+.tel--number {
+    color: #014a6f;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 4px;
+    &:hover{
+    color: #014a6f;
+    }
+}
+.anchor--div{
+  display: block;
+}
+.ans--index{
+  display: none;
+}
+.panel--index {
+    margin-bottom: 10px;
+}
+.accordionItem:nth-child(1){
+     .ans--index:nth-child(1){
+       display: block;
+     }
+}
+.accordionItem:nth-child(2){
+     .ans--index:nth-child(2){
+       display: block;
+     }
+}
+.accordionItem:nth-child(3){
+     .ans--index:nth-child(3){
+       display: block;
+     }
+}
+.accordionItem:nth-child(4){
+     .ans--index:nth-child(4){
+       display: block;
+     }
+}
+    .accordionItem:nth-child(5){
+     .ans--index:nth-child(5){
+       display: block;
+     }
+}
+.accordionItem:nth-child(6){
+     .ans--index:nth-child(6){
+       display: block;
+     }
+}
+.accordionItem:nth-child(7){
+     .ans--index:nth-child(7){
+       display: block;
+     }
+}
+.accordionItem:nth-child(8){
+     .ans--index:nth-child(8){
+       display: block;
+     }
+}
+
+

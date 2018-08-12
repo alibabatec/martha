@@ -1,0 +1,69 @@
+<div class="row cookies--banner" *ngIf="isFirst">
+  <div class="close--cut"><a href="javascript:void(0)" class="close--anchor" (click)="continuePage()"><span class="cookie--close">{{'cookieClose' | translate}}</span><span class="cookie--cut">X</span></a></div>
+    <div class="col col-sm-4 col-md-3">
+       <div class="cookie-lft--content">
+        <div class="cookie--text">{{'cookieHeading1' | translate}}</div>
+        <div class="cookie--text">{{'cookieHeading2' | translate}}</div>
+        <div class="cookie--text">{{'cookieHeading3' | translate}}</div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="cookies--data">
+        {{'cookieContent' | translate}}
+        <a href="http://www.tvlicensing.co.uk/privacy-security-policies#cookies" class="anchor--decorator" (click)="continuePage()">cookies.</a>
+      </div>
+    </div>
+    <div class="col col-sm-4 col-md-2">
+        <a href="javascript:void(0)" class="breadcrumb--ul" (click)="continuePage()">
+           <img src="assets/img/continue.png" class="img--continue" alt="Continue"/>
+           <span class="txt--continue">{{'cookieContinue' | translate}}</span>
+        </a>
+    </div>
+</div>
+<div class="row header--bg">
+  <div class="col col-sm-4 col-md-2 header-mob">
+    <!--<a href="javascript:void(0)" routerLink="/home" class="header-img" *ngIf="logoLink">
+      <img [src]="urlImg()" class="img-full" alt="TV Licensing"/>
+    </a>
+    -->
+    <div class="header-img">
+      <!--<a href="javascript:void(0)" class="cursor--default" *ngIf="!logoLink"><img [src]="urlImg()" class="img-full"  alt="TV Licensing"/></a>-->
+    </div>
+  </div>
+  <div class="barimg" *ngIf="login">
+    <img src="assets/img/menu.png" (click)="showHideClass='showdiv';addHmtl()" class="barfulimg" alt="Hamburger"/>
+  </div>
+  <div class="col-md-5 menu-mob" [ngClass]="showHideClass" (click)="showHideClass='hidediv';removeCls()">
+    <nav class="menu--container" *ngIf="login">
+      <ul class="menu-ul">
+        <li class="menu-li labl-with-cross">
+          <label class="user__name">{{userName}}</label>
+          <img src="assets/img/cross.png" (click)="showHideClass='hidediv'" class="icon-cut" alt="Cross"/>
+        </li>
+        <li class="menu-li ">
+          <<!--a class="img-with--text" routerLink="/home" routerLinkActive="menu-active" (click)="showHideClass='hidediv'">
+            <img src="assets/img/nav_home_icn.png" class="icon-img" alt="{{'header.home' | translate}}"/>
+            <label class="icon-label pointer--lbl">{{'header.home' | translate}}</label>
+          </a>-->
+        </li>      
+      
+        <li class="menu-li ">
+          <a href="javascript:void(0)" class="img-with--text menu-lasttxt" routerLinkActive="menu-active" (click)="signOut()" (click)="showHideClass='hidediv'">
+            <div class="icon-img icon-username dispnone">{{userName}}</div>
+            <a class="icon-label singoutmob pointer--lbl">{{'header.signOut' | translate}}</a>
+          </a>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </nav>
+    <div>
+
+    </div>
+  </div>
+  <div class="col col-sm-4 col-md-5">
+    <div class="head--right">
+    <div class="inline--block"><div class="head__reg--lbl">{{'header.registeredLbl'|translate}}</div></div>
+    <div class="inline--block"><a href="#" class="head__btn--round">{{'header.loginNow'|translate}}</a></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,195 @@
+{
+    "id": "Login Verification",
+    "fields": [
+        {
+            "code": "GQE_LICENCE_NO",
+            "label": "Licence No",
+            "value": "1234567",
+            "formattedValue": "1234567",
+            "type": "field"
+        },
+        {
+            "code": "GQE_LICENCE_STATUS",
+            "label": "Licence Status",
+            "value": "ACTIVE",
+            "formattedValue": "ACTIVE",
+            "type": "field"
+        },
+        {
+            "code": "GQE_COMPANY_ID",
+            "label": "Company Id",
+            "value": "1",
+            "formattedValue": "1",
+            "type": "field"
+        },
+        {
+            "code": "GQE_BRANCH_ID",
+            "label": "Branch Id",
+            "value": "1",
+            "formattedValue": "1",
+            "type": "field"
+        },
+        {
+            "code": "GQE_ACCOUNT_ID",
+            "label": "Account Id",
+            "value": "9876543210",
+            "formattedValue": "9876543210",
+            "type": "field"
+        },
+        {
+            "code": "GQE_MULTIPLE_ID",
+            "label": "Multiple Id",
+            "value": "1",
+            "formattedValue": "1",
+            "type": "field"
+        },
+        {
+            "code": "GQE_ARREARS_AMOUNT",
+            "label": "Arrears",
+            "value": "0",
+            "formattedValue": "0",
+            "type": "field"
+        },
+        {
+            "code": "GQE_NO_OF_MISSED_PAYMENTS",
+            "label": "No. Missed Payments",
+            "value": "3",
+            "formattedValue": "3",
+            "type": "field"
+        },
+        {
+            "code": "GQE_PAID_TO_DATE",
+            "label": "Paid To Date",
+            "value": "24.50",
+            "formattedValue": "24.50",
+            "type": "field"
+        },
+        {
+            "code": "GQE_NEXT_PAYMENT_DATE",
+            "label": "Next Payment Date",
+            "value": "20180101",
+            "formattedValue": "01/01/2018",
+            "type": "fieldDate8"
+        },
+        {
+            "code": "GQE_NEXT_PAYMENT_AMOUNT",
+            "label": "Next Payment Amount",
+            "value": "12.25",
+            "formattedValue": "12.25",
+            "type": "field"
+        },
+        {
+            "code": "GQE_PAYMENT_METHOD",
+            "label": "Payment Method",
+            "value": "Direct Debit",
+            "formattedValue": "Direct Debit",
+            "type": "field"
+        },
+        {
+            "code": "GQE_LICENCE_HOLDER",
+            "label": "Licence Holder",
+            "value": "Mr Alun Morris",
+            "formattedValue": "Mr Alun Morris",
+            "type": "field"
+        },
+        {
+            "code": "GQE_ADDRESS_LINE_1",
+            "label": "Address Line 1",
+            "value": "26 Y Dderwen",
+            "formattedValue": "26 Y Dderwen",
+            "type": "field"
+        },
+        {
+            "code": "GQE_ADDRESS_LINE_2",
+            "label": "Address Line 2",
+            "value": "Llangynwyd",
+            "formattedValue": "Llangynwyd",
+            "type": "field"
+        },
+        {
+            "code": "GQE_ADDRESS_LINE_3",
+            "label": "Address Line 3",
+            "value": "",
+            "formattedValue": "",
+            "type": "field"
+        },
+        {
+            "code": "GQE_ADDRESS_LINE_4",
+            "label": "Address Line 4",
+            "value": "Mid Glamorgan",
+            "formattedValue": "Mid Glamorgan",
+            "type": "field"
+        },
+        {
+            "code": "GQE_ADDRESS_LINE_5",
+            "label": "Address Line 5",
+            "value": "",
+            "formattedValue": "",
+            "type": "field"
+        },
+        {
+            "code": "GQE_POSTCODE",
+            "label": "Postcode",
+            "value": "CF34 9HX",
+            "formattedValue": "CF34 9HX",
+            "type": "field"
+        },
+        {
+            "code": "GQE_LICENCE_FEE",
+            "label": "Licence Fee",
+            "value": "147.00",
+            "formattedValue": "147.00",
+            "type": "field"
+        },
+        {
+            "code": "GQE_LICENCE_TYPE",
+            "label": "Licence Type",
+            "value": "Colour",
+            "formattedValue": "Colour",
+            "type": "field"
+        },
+        {
+            "code": "GQE_LICENCE_EXPIRY_DATE",
+            "label": "Licence Expiry Date",
+            "value": "20181130",
+            "formattedValue": "30/11/2018",
+            "type": "fieldDate8"
+        },
+        {
+            "code": "GQE_LICENCE_RECEIVED",
+            "label": "Licence Received",
+            "value": "Email",
+            "formattedValue": "Email",
+            "type": "field"
+        },
+        {
+            "code": "GQE_PAY360_MERCHANT_ID",
+            "label": "Pay360 Merchnat Id",
+            "value": "TESTMERCH",
+            "formattedValue": "TESTMERCH",
+            "type": "field"
+        },
+        {
+            "code": "GQE_PAY360_REMOTE_PASSWORD",
+            "label": "Pay360 Remote Password",
+            "value": "TESTPASS",
+            "formattedValue": "TESTPASS",
+            "type": "field"
+        },
+        {
+            "code": "GQE_PAY360_TEMPLATE",
+            "label": "Pay360 Template",
+            "value": "http://www.secpay.com/users/bbc01/PCI.html",
+            "formattedValue": "http://www.secpay.com/users/bbc01/PCI.html",
+            "type": "field"
+        },
+        {
+            "code": "GQE_OTC_CARD_NO",
+            "label": "OTC Card No.",
+            "value": "63376448927398714",
+            "formattedValue": "63376448927398714",
+            "type": "field"
+        }
+    ],
+    "tables": []
+}

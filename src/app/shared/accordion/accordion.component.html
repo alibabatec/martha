@@ -1,0 +1,42 @@
+<div class="accordion">
+  <div class="accordionItem" *ngFor="let data of accordionData; let i = index;">
+    <div class="row accordionTitle" (click)="expand(i)">
+      <div class="col-10 col-sm-10 col-md-10"><p>{{data.title| translate}}</p></div>
+      <a href="javascript:void(0)" class="col-2 col-sm-2 col-md-2 paddingRit0 allign--right anchor--div">
+        <img class="accorIcon" src="" alt="Accord">
+      </a>
+    </div>
+    <div class="panel panel--index">
+     <div class="ans--first ans--index">
+      <p class="panel--para">{{data.texthelpAns1 | translate}}</p>
+      <p class="panel--para"><b class="text--bold">{{data.textBold1 | translate}}</b><a class="tel--anchor" routerLink="/contact">{{data.textLink1 | translate}}</a><span>{{data.textMsg1 | translate}}</span></p>
+      <p class="panel--para"><b class="text--bold">{{data.textBold2 | translate}}</b><a class="tel--anchor" routerLink="/pay">{{data.textLink2 | translate}}</a><span>{{data.textMsg2 | translate}}</span></p>
+      <p class="panel--para"><b class="text--bold">{{data.textBold3 | translate}}</b><a class="tel--anchor" routerLink="/contact">{{data.textLink3 | translate}}</a><span>{{data.textMsg3 | translate}}</span></p>
+      <p class="panel--para"><b class="text--bold">{{data.textBold4 | translate}}</b><a class="tel--anchor" routerLink="/contact">{{data.textLink4 | translate}}</a><span>{{data.textMsg4 | translate}}</span><a class="tel--anchor" href="http://www.Paythru.com/what-we-do/" target="_blank">{{data.textLink4a | translate}}</a></p>
+      <p class="panel--para"><b class="text--bold">{{data.textBold5 | translate}}</b><span>{{data.text5First | translate}}</span><a class="tel--anchor" routerLink="/pay/paypoint">{{data.textLink5 | translate}}</a><span>{{data.textMsg5 | translate}}</span><a class="tel--anchor" href="https://www.paypoint.com/en-gb/consumers/store-locator" target="_blank">{{data.textLink5a | translate}}</a></p>
+      <p class="panel--para"><span>{{data.textMsg5a | translate}}</span><a class="tel--anchor" routerLink="/contact">{{data.textLink5b | translate}}</a></p>
+    </div>
+    <div class="ans--two ans--index">
+      <p class="panel--para"><span>{{data.textAns2Msg | translate}}</span><a class="tel--anchor" routerLink="/pay">{{data.textAns2Link | translate}}</a><span>{{data.textAns2Msg2 | translate}}</span><a class="tel--number" href="tel:{{data.textAns2Link2 | translate}}">{{data.textAns2Link2 | translate}}</a><span>{{data.textAns2Msg3 | translate}}</span></p>
+    </div>
+    <div class="ans--three ans--index">
+      <p class="panel--para"><span>{{data.textAns3Msg | translate}}</span><a class="tel--anchor" routerLink="/contact">{{data.textAns3Link | translate}}</a><span>{{data.textAns3Msg2 | translate}}</span></p>
+    </div>
+    <div class="ans--eight ans--index">
+      <p class="panel--para"><span>{{data.textAns8Msg | translate}}</span><a class="tel--number" href="tel:{{data.textAns8Link | translate}}">{{data.textAns8Link | translate}}</a><span>{{data.textAns8Msg2 | translate}}</span></p>
+    </div>
+    <div class="ans--nine ans--index">
+      <p class="panel--para"><span>{{data.textAns9Msg | translate}}</span><a class="tel--number" href="tel:{{data.textAns9Link | translate}}">{{data.textAns9Link | translate}}</a><span>{{data.textAns9Msg2 | translate}}</span></p>
+    </div>
+    <div class="ans--four ans--index">
+      <div>{{data.textHelpAns4 | translate}}</div>
+    </div>
+    <div class="ans--six ans--index">
+      <p class="panel--para"><span>{{data.textAns6Msg | translate}}</span><a class="tel--number" href="tel:{{data.textAns6Link | translate}}">{{data.textAns6Link | translate}}</a><span>{{data.textAns6Msg2 | translate}}</span></p>
+    </div>
+    <div class="ans--seven ans--index">
+      <p><span>{{data.textAns7Msg | translate}}</span><a class="tel--anchor" [href]="url()" target="_blank">{{data.textAns7Link | translate}}</a><span>{{data.textAns7Msg2 | translate}}</span></p>
+    </div>
+  </div>
+</div>
+

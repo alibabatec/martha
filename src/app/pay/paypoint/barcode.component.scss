@@ -1,0 +1,55 @@
+@import "../../../scss/config";
+@import "../../../scss/mixins";
+@import "../../../scss/font";
+.paypoint--head{
+  font-size: $font-size-22;
+  font-family: $font-gotham-bold;
+  color: $color-blue-standard;
+  font-weight: 700;
+}
+.container{
+  background-color: $color-white;
+  padding:10px 20px 50px 15px;
+}
+.margin__top--20{
+  margin-top: 20px;
+}
+.margin__top--50{
+  margin-top: 50px;
+}
+.margin__bottom--50{
+  margin-bottom: 50px;
+}
+.message{
+  font-weight: 600;
+  color:black;
+  font-size: $font-size-16;
+  margin-top: 12px;
+}
+.padding__bottom--50{
+  padding-bottom: 50px;
+}
+.action>.btn{
+  margin-left: 5px;
+  float: right;
+}
+.licence-btn {
+  text-align: center;
+}
+
+.btn-common {
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  font-size: $font-size-16;
+}
+:host /deep/ .barcode{
+  border: 1px solid black;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: 40px;
+}
+.borderBottom{
+  border-bottom:  1px solid #dcedcb;
+  width: 100%;
+  margin: 0 18px;
+}

@@ -1,0 +1,75 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+
+.content {
+  background-color: #FFFFFF;
+  left: 50%;
+  min-width: 428px;
+  max-width: 700px;
+  min-height: 232px;
+  padding: 0 0 15px 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 9999999;
+}
+
+.btn-common {
+  min-width: 155px;
+}
+
+.btn-active {
+  margin-top: 25px;
+}
+
+.containerlgb {
+  width: 32%;
+}
+
+.logout-box-margin {
+  margin: 0 0 15px 10px;
+}
+
+.modal--header {
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.modal--heading {
+  width: 85%;
+  float: left;
+  text-align: left;
+}
+
+.heading--large {
+  font-size: $font-size-18;
+  font-family: $font-gotham-bold;
+  color: $color-blue-standard;
+  font-weight: 700;
+}
+
+.logout--para {
+  font-size: 13px;
+  font-family: $font-gotham-book;
+  text-align: left;
+}
+
+.modal--container {
+  clear: both;
+}
+
+.modal--action {
+  text-align: center;
+  padding: 10px;
+}
+
+.timeout-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 1000;
+}

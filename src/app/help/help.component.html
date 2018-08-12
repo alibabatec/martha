@@ -1,0 +1,38 @@
+<div class="row container__mrg--top margin__btm--20">
+  <div class="col-md-8">
+    <div class="card shadowBorderNone">
+      <div class="content">
+        <div class="faq-title">
+          <label class="faq-head">{{'help.helpTitle'| translate}}</label>
+          <div class="faq-image">
+            <img src="assets/img/faq.png" class="img-full" alt="Faq"/>
+          </div>
+        </div>
+        <app-accordion [allOpen]='true' [accordion-data]="accordionData" [collapsedIcon]="'assets/img/up_arrow.png'" [expandedIcon]="'assets/img/down_arrow.png'"></app-accordion>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 margin__top--20 margin__btm--20">
+    <div class="card shadowBorderNone">
+      <div class="content">
+        <div class="faq-title">
+          <label class="faq-head">{{'help.helpHeading' | translate}}</label>
+          <div class="faq-image">
+            <img src="assets/img/help.png" class="img-full" alt="Help"/>
+          </div>
+        </div>
+        <div class="contentIn">
+          <div class="contactus">
+            <p>{{'help.content1' | translate}}<br><a routerLink="/contact">{{'help.content1Link' | translate}}</a> <b>&gt;</b></p>
+          </div>
+          <div class="licence">
+            <p>{{'help.content2' | translate}}<br>
+              <a href="http://www.tvlicensing.co.uk/faqs" target="_blank">{{'help.content2link' | translate}}</a> <b>&gt;</b></p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,130 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+@import "./src/scss/font";
+
+.contact-us-content {
+  font-family: $font-gotham-book;
+  padding: 0px;
+  position: relative;
+  margin-top: 35px;
+  z-index: 1;
+}
+
+.content-container {
+  background: $color-white;
+  padding: 0 15px;
+  min-height: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.contact-us-faq-heading {
+  font-family: $font-gotham-bold;
+  font-size: $font-size-14;
+  margin: 10px 0 10px;
+}
+
+.contact-us-heading {
+  font-family: $font-gotham-bold;
+  font-size: $font-size-14;
+  margin: 10px 0 2px;
+}
+
+.contact-us-title {
+  border-bottom: 1px solid #dcedcb;
+  padding: 5px 0;
+}
+
+.contact-us-image {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
+
+.contact-us-image img {
+  width: 50px;
+}
+
+.contact-us-head {
+  display: inline-block;
+  width: 80%;
+  color: $color-blue-standard;
+  margin-top: 6px;
+  font-size: $font-size-22;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.padding-left-0 {
+  padding-left: 0;
+}
+
+.faq-link {
+  border-bottom: solid 1px #014a6f;
+  color: #014a6f;
+  margin-top: 20px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  font-size: $font-size-16;
+
+}
+
+.email-link a {
+  border-bottom: solid 1px #014a6f;
+  color: #014a6f;
+  font-family: $font-gotham-book;
+  margin-top: 20px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  font-size: $font-size-16;
+}
+.contact--para{
+  font-family: $font-gotham-book;
+  a{
+    font-family: $font-gotham-book;
+  }
+}
+.call--number {
+    color: #014a6f;
+    font-size: $font-size-16;
+    &:hover{
+    color: #014a6f;
+    }
+}
+  .faq--blck {
+    display: inline-block;
+    margin-top: 5px;
+}
+//***********************for media query*****************************//
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  .contact-us-head {
+    width: 75%;
+  }
+  .contact-us-content {
+    margin-top: 20px;
+  }
+  .faq-link {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+           .call--hyper{
+             min-width: 130px;
+           }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1366px) {
+          .call--hyper{
+             min-width: 130px;
+           }
+}

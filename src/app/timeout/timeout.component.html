@@ -1,0 +1,20 @@
+<div *ngIf="show">
+  <div class="timeout-bg"></div>
+  <div class="containerlgb content">
+    <div class="modal--header logout-box-margin">
+      <div class="modal--heading">
+        <h3 class="heading--large" [ngClass]="{'error':title=='Error'}">{{'timeout.heading' | translate}}</h3>
+      </div>
+    </div>
+    <div class="modal--container">
+      <div class="logout--para logout-box-margin">
+        {{timeleft}}<br>
+        {{'timeout.message' | translate}}
+      </div>
+    </div>
+    <div class="modal--action">
+      <button class="btn-common disp--inblock btn-active" (click)="getMeOut()">{{'timeout.no' | translate}}</button>
+      <button class="btn-common disp--inblock" (click)="reset()">{{'timeout.yes' | translate}}</button>
+    </div>
+  </div>
+</div>

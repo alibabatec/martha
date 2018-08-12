@@ -1,0 +1,108 @@
+<div class="row container__mrg--top">
+  <div class="col-md-8">
+    <div class="card shadowBorderNone">
+      <div class="content">
+        <div class="faq-title">
+          <label class="faq-head">{{'pay.heading'| translate}}</label>
+          <div class="faq-image">
+            <img src="assets/img/paymnet-card.png" class="img-full" alt="Payment Card"/>
+          </div>
+        </div>
+        <div class="leftcard">
+          <div *ngIf="isAmountShow">
+            <img src="assets/img/update.png" width="60" alt="Payment Updated"/>
+            <div class="cardContent">
+              <label class="uptodate">{{'pay.headSuccess'| translate}}</label>
+              <p>{{'pay.headSuccessMsg'| translate}}</p>
+            </div>
+            <p class="font-weight-bold paddingLeft5">{{'pay.headSucessPara'| translate}}</p>
+          </div>
+          <div *ngIf="!isAmountShow">
+            <img src="assets/img/due_fees_icn.png" width="60" alt="Payment Due"/>
+            <div class="cardContent">
+              <label class="uptodate">{{'pay.headUnSuccess'| translate}}</label>
+              <p>{{'pay.headUnSuccessMsg'| translate}}</p>
+            </div>
+            <p class="font-weight-bold paddingLeft5">{{'pay.headUnSucessPara'| translate}}</p>
+          </div>
+          <div class="row amount-container">
+            <div class="col-12 col-sm-12 col-md-6 shadow--box" id="outstandingTop">
+              <a id="outstanding" href="javascript:void(0)" class="dis--inlineblck">
+              <label class="radioBtn"><p class="nextPayment nowrap" *ngIf="isAmountShow">{{'pay.nextMonthPay'| translate}}</p>
+                <p class="nextPayment nowrap" *ngIf="!isAmountShow">{{'pay.outstandingAmount'| translate}}</p>
+                <input type="radio" checked="checked" name="radio" [value]="true" (change)="makePayment()"
+                       [(ngModel)]="amount">
+                <span class="checkmark"></span>
+              </label>
+              </a>
+              <h4 class="amount nowrap" *ngIf="!isAmountShow">&#163;{{gqeArrearsAmnt}}</h4>
+              <h4 class="amount nowrap" *ngIf="isAmountShow">&#163;{{nextPayment}}</h4>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 shadow--box" id="otherTop">
+              <a id="other" href="javascript:void(0)" class="dis--inlineblck">
+              <label class="radioBtn"><p class="nextPayment">{{'pay.otherMonthPay' | translate}}<span
+                class="minimum-amount">{{'pay.minimumPay'| translate}}</span></p>
+                <input type="radio" name="radio" [value]="false" (change)="makePayment()" [(ngModel)]="amount" >
+                <span class="checkmark"></span>
+              </label>
+              </a>
+              <form name="amtForm" #amtForm="ngForm">
+                <input class="other-amt-input" type="text" [appFocus]="inputFocused" (focusout)="focusOut()" [disabled]="amount==true" placeholder="£" name="otherPayment"
+                       (input)="makePayment();addSign($event.target.value);"
+                       pattern="[0-9.]*" ngModel #otherPayment>
+
+                <div class="text-danger" *ngIf="!amount && lowAmount && !inputFocused">{{'pay.minimumAmountInfo' |
+                  translate}}
+                </div>
+                <div class="text-danger" *ngIf="!amount && max && !inputFocused">{{'pay.maximumAmountInfo' |
+                  translate}} £{{maxAmount}}
+                </div>
+                <div class="text-danger" *ngIf="!amount && nillAmount && !inputFocused">{{'pay.nillAmountInfo' |
+                  translate}}
+                </div>
+                <div class="text-danger" *ngIf="notANumber">{{'pay.notNoInfo' | translate}}</div>
+              </form>
+            </div>
+
+            <div class="col-12">
+              <form name=”paymentform” ngNoForm method="POST" [action]="actionURL">
+                <input type='hidden' name='bgcolor' value='#e1f2cc'>
+                <input type='hidden' name='customer' [value]='customer'>
+                <input type='hidden' name='merchant' [value]='merchantId'>
+                <input type='hidden' name='trans_id' [value]='transId'>
+                <input type='hidden' name='amount' [value]='getAmount()'>
+                <input type='hidden' name='digest' [value]='ciphertext'>
+                <input type='hidden' name='callback' [value]='callbackUrl'>
+                <input type='hidden' name='template' [value]='templateId'>
+                <input type='hidden' name='ssl_cb' value='true'>
+                <div class="pay"><a href="javascript:void(0)" class="anchorInput--focus"><input
+                  [ngClass]="{'paymentBtn':(!lowAmount || !nillAmount),'paymentBtnDisabled':(lowAmount || nillAmount || notANumber || max || !isValid)}"
+                  [disabled]="lowAmount || nillAmount || notANumber || !isValid || max" type="submit" (click)="onSubmit()"
+                  value="{{'payBtn' | translate}}"/></a></div>
+                <p *ngIf="!isValid" class="text-danger text-center">{{'pay.paymentNotAvailable' | translate}}</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 margin__top--20 margin__btm--20">
+    <div class="card shadowBorderNone">
+      <div class="content">
+        <div class="faq-title">
+          <label class="col-8 col-md-10 faq-head">{{'pay.headBar'| translate}}</label>
+          <div class="col-4 col-md-2 faq-image allign--right">
+            <img src="assets/img/paypoint.png" class="pLogo" alt="Paypoint"/>
+          </div>
+        </div>
+        <div class="contentIn">
+          <div class="contactus">
+            <p>{{'pay.headBarPara'| translate}} <a href="https://www.paypoint.com/en-gb/consumers/store-locator"
+                                                   target="_blank">{{'pay.headLocator'| translate}}</a>.</p>
+            <div class="text-center"><a class="viewBarcode" routerLink="/pay/paypoint">{{'pay.barCodeBtn'| translate}}</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,140 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+
+.expired-wrapper {
+  background: #fff;
+  min-height: 500px;
+  padding: 10px 20px;
+  margin-top: 60px;
+}
+
+.expired-bottom {
+  text-align: center;
+  margin-top: 263px;
+}
+
+.expired-heading {
+  font-size: $font-size-18;
+  font-family: $font-gotham-bold;
+  color: $color-blue-standard;
+  font-weight: 700;
+  width: 80%;
+  float: left;
+  margin-top:10px;
+}
+
+.expired-headimg {
+  width: 20%;
+  float: left;
+  text-align: right;
+}
+
+.pdng-0 {
+  padding: 0;
+}
+
+.mrgn-0 {
+  margin: 0;
+}
+
+.border-solid-bottom {
+  border-bottom: 1px solid #dcedcb;
+  padding-bottom: 10px;
+}
+
+.expired-innertxt {
+  font-size: $font-size-14;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  text-align: left;
+  margin: 20px 0;
+  color: $color-black-dark;
+}
+
+.expired-innerpara {
+  text-align: left;
+  font-size: $font-size-14;
+  font-family: $font-gotham-book;
+}
+
+.expired-btn {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.expired-bottompara {
+  font-size: $font-size-14;
+  font-family: $font-gotham-book;
+  color: $color-black-dark;
+}
+
+.link-arrow {
+  color: $color-blue-standard;
+  font-size: $font-size-14;
+  font-family: $font-gotham-book;
+  text-decoration: underline;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.ofgt-arrow {
+  color: #004b6d;
+  font-size: 14px;
+}
+.simple--link {
+    color: #004b6d;
+}
+//***********************for media query*****************//
+@media screen and (min-width: 960px) and (max-width: 1366px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .footer-simple {
+    width: 84px;
+    margin: 0 auto;
+    margin-right: 10px;
+  }
+  .footer-anchor {
+    font-size: 12px;
+  }
+  .footer-li {
+    padding: 1px;
+  }
+  .icon-username {
+    font-size: 12px;
+  }
+  .footer-logmob {
+    padding-top: 10px;
+  }
+  .footer-logo {
+    width: 123px;
+    margin-top: 10px;
+    margin-left: -20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer-bg {
+    background: initial;
+  }
+  .footer-abs {
+    background: initial;
+  }
+  .footer-ul {
+    text-align: center;
+  }
+  .footer-li {
+    width: 85%;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
+  .footer-simple {
+    width: 85px;
+    margin: 0 0 0 10px;
+  }
+
+}

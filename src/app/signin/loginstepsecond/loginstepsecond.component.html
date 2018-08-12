@@ -1,0 +1,97 @@
+<div class="containerdesk container-mob">
+    <div class="innerlolg-container">
+      <div class="col-sm-12 col-md-6 loginForm md-float-rit">
+        <div [hidden]="errorMessage===''" class="font-size-12">
+            <img src="assets/img/input_error.jpg" alt="Error" align="left" width="24"/>
+            <div class="alert-msg padbot15">
+              {{errorMessage | translate}}
+            </div>
+        </div>
+        <!-- <h1>{{'login.logHeadingLarge' | translate}}</h1><div class="img__right--securelogin"></div> -->
+        <p>{{'login.logHeadingSmall' | translate}}</p>
+        <hr/>
+        <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+          <div class="form-group" class="pos-rel">
+            <label for="emailAddress">{{'login.logEmailAddress'| translate}}</label>
+            <div class="">
+              <div class="input__icon--control">
+              <div class="inputicon--left user--icon">
+              </div>
+              <div class="vertical--line"></div>
+              <input type="text" id="emailAddress" class="col-10 input--focus form-control width--full pdgn__lft--34" pattern="[0-9]*"  [(ngModel)]="emailAddress" name="emailAddress" #emailAdd="ngModel" autocomplete="off"  autofocus minlength="2" maxlength="35" pattern="[a-zA-Z][a-zA-Z-' ]{1,35}" required/>
+  
+             
+              <div *ngIf="emailAdd.invalid && (emailAdd.dirty || emailAdd.touched)"
+                  class="alert alert-danger">
+  
+                <div *ngIf="emailAdd.errors.required">
+                  {{'login.emailAddress.errors.required'| translate}}
+                </div>
+                <div *ngIf="emailAdd.errors.minlength">
+                  {{'login.emailAddress.errors.minlength'| translate}}
+                </div>
+                <div *ngIf="emailAdd.errors.pattern">
+                  {{'login.emailAddress.errors.pattern'| translate}}
+                </div>                     
+              </div>
+              </div>
+                {{'login.forgotEmail' | translate}}
+              <div class="help-ln-d" [ngClass]="{'show': isClicked,'hide':!isClicked}" #hln>
+                  <img src="assets/img/help_ln_d.png" alt="info" class="help-ln-img helpimg__not--mob"/>
+               </div>
+              <div [hidden]="licenceFoc===true" class="margin-top-5 font-size-12">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row paddinglft15">
+            <label for="password">{{'login.password'| translate}}</label>
+            <div class="input__icon--control">
+              <div class="inputicon--left user--icon">
+              </div>
+              <div class="vertical--line"></div>
+            
+              <input type="password" id="password" class="col-10 input--focus form-control width--full pdgn__lft--34" pattern="[0-9]*"  [(ngModel)]="password" name="password" #pwd="ngModel" autocomplete="off"  autofocus minlength="2" maxlength="35" pattern="[a-zA-Z][a-zA-Z-' ]{1,35}" required/>
+  
+             
+              <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)"
+                  class="alert alert-danger">
+  
+                <div *ngIf="pwd.errors.required">
+                  {{'login.password.errors.required'| translate}}
+                </div>
+                <div *ngIf="pwd.errors.minlength">
+                  {{'login.password.errors.minlength'| translate}}
+                </div>
+                <div *ngIf="pwd.errors.pattern">
+                  {{'login.password.errors.pattern'| translate}}
+                </div>                     
+              </div>  
+          </div>
+              {{'login.forgotPassword' | translate}}
+            <div [hidden]="lastNameFoc===true" class="margin-top-5">
+             
+            </div>
+            <div class="help-nm-d hide" [ngClass]="{'show': isClickedLst,'hide':!isClickedLst}" #hnm>
+                  <img src="assets/img/help_nm_d.png" alt="info" class="help-nm-img helpimg__not--mob"/>
+            </div>
+          </div>
+          <div class="form-group row form-group row paddinglft15 lastform--mob">
+           
+            <div class=" col-10 logbtn-mob">
+                <div class="btn-with--icon"><button type="submit" class="btn-common sign--btn" routerLink="/signin/loginstepsecond">{{'login.logSign' | translate}}<div class="img__right--arrow"></div></button></div>
+                <p>Step 2 of 2</p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-12 col-md-6 loginLftPanel md-float-lft">
+        
+        <!-- <h3 class="heading--small line-break">{{'login.title' | translate}}</h3>
+        <p class="para--standard">{{'login.paraNotRegistered' | translate}}</p>
+          <button class="btn-common register--btn"><a href="#" target="_blank">{{'login.registerNow'| translate}}</a></button> -->
+        
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  

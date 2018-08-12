@@ -1,0 +1,28 @@
+<app-timeout [show]="isTimeout" (yes-btn)="reset()" (reset-btn)="getMeOut()" [timeleft]="idleState"></app-timeout>
+<div class="row">
+  <div class="width-full header--bg">
+    <div class="container-head">
+      <div class="col col-sm-12 col-md-12">
+        <app-header></app-header>
+      </div>
+    </div>
+  </div>
+  <div class="width-full">
+    <div class="container-new content-height">
+      <div class="col col-sm-12 col-md-12">
+        <router-outlet></router-outlet>        
+      </div>
+    </div>
+  </div>
+  <div class="width-full">
+    <div class="container-foot">
+      <div class="col col-sm-12 col-md-12">
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </div>
+  <app-dialog [title]="title" [message]="message" [paymsgBefore]="paymsgBefore" [paymsgAfter]="paymsgAfter" [payamount]="payamount" [show]="show" [first]="first" (cut-btn)="emitAction()" (log-out)="logOut()" (no-btn)="close()" [makeApay]="makeApay" [logBtn]="logBtn" [privacyBtn]="privacyBtn"></app-dialog>
+</div>
+<div *ngIf="loaderVisible">
+  <ng4-loading-spinner></ng4-loading-spinner>
+</div>

@@ -1,0 +1,35 @@
+<div class="row container__mrg--top callback-content">
+  <div class="content-container">
+    <div class="row">
+      <div class="col-12 col-md-12" *ngIf="success">
+        <div class="align-center margin-top-50">
+          <div class="col-md-12">
+            <img src="assets/img/update.png" class="img-fluid success-image" alt="Transaction Successful" />
+          </div>
+          <div class="callback-heading margin-top-20">
+            <h1 class="success-heading">{{'callHeadSuccess' | translate}}</h1>
+            <p class="col-12 col-md-12 text-padding text" *ngIf="isValid">{{'callContent1Success' | translate}}</p>
+            <p class="col-12 col-md-12 text-padding text" *ngIf="!isValid">{{'callContent2Success' | translate}}</p>
+          </div>
+          <div class="col-md-12 margin-top-50">
+            <input type="button" class="btn-common" name="home" (click)="redirect('/home')" value="{{'homeBtn' | translate}}" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12" *ngIf="!success">
+        <div class="align-center margin-top-50">
+          <div class="col-md-12">
+            <img src="assets/img/due_fees_icn.png" class="img-fluid error-image" alt="Transaction Failed" />
+          </div>
+          <div class="callback-heading margin-top-20">
+            <h1 class="red-heading">{{'callHeadUnsuccess' | translate}}</h1>
+            <p class="col-12 col-md-12 text-padding text">{{'callContent1UnSuccess' | translate}}</p>
+          </div>
+          <div class="col-md-12">
+            <input type="button" class="btn-common" name="tryAgain" (click)="redirect('/home')" value="{{'tryBtn' | translate}}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

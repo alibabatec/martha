@@ -1,0 +1,270 @@
+<div class="home--wrapper">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <div class="iconwith--largehead" *ngIf="!isAmountShow">
+        <div class="imgrow--left">
+          <div class="iconimg--left"><img src="assets/img/due_fees_icn.png" class="due-icon" alt="Payment Overdue"/>
+          </div>
+        </div>
+        <div class="head-with-para">
+          <h1 class="large--heading">{{'dashboard.payUnsuccess' | translate}}</h1>
+          <p class="normal--para">{{'dashboard.payUnsuccessMsg' | translate}}</p>
+        </div>
+      </div>
+      <div class="iconwith--largehead" *ngIf="isAmountShow">
+        <div class="imgrow--left">
+          <div class="iconimg--left"><img src="assets/img/update.png" class="due-icon" alt="Payment Updated"/></div>
+        </div>
+        <div class="head-with-para">
+          <h1 class="large--heading heading--green">{{'dashboard.paySuccess' | translate}}</h1>
+          <p class="normal--para">{{'dashboard.paySuccessMsg' | translate}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 input-row">
+      <div class="topleft">
+        <input type="button" class="btn-common" name="Make a payment" value="{{'dashboard.btnMakePay' | translate}}" routerLink="/pay"/>
+      </div>
+    </div>
+  </div>
+  <div class="row outer-pdn-top cardview-desk">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="title-with-img">
+          <label class="card--head">{{'dashboard.tvDetailsHeading' | translate}}</label>
+          <div class="card--img">
+            <div class="img-size">
+              <img src="assets/img/tV _licence_details.png" class="img-full" alt="TV Licence Details"/>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <ul class="card-list">
+            <li class="card-list--li">
+              <address class="address-para">
+                <address>{{licenceHolderName}}</address>
+                <address>{{addressLine1}}</address>
+                <address>{{addressLine2}}</address>
+                <address>{{addressLine3}}</address>
+                <address>{{addressLine4}}</address>
+                <address>{{addressLine5}}</address>
+                <address>{{gqePostCode}}</address>
+              </address>
+            </li>
+            <li class="card-list--li">
+              <div class="card--label">{{'tvLicencenumberLbl' | translate}}</div>
+              <b class="card--value">{{licenceNo}}</b>
+            </li>
+            <li class="card-list--li">
+              <div class="card--label">{{'tvLicencefeeLbl' | translate}}</div>
+              <b class="card--value"><b class="currecny--space">£</b>{{licenceFee}}</b>
+            </li>
+            <li class="card-list--li">
+              <div class="card--label">{{'tvLicencevalidUntilLbl' | translate}}</div>
+              <b class="card--value">{{validUntil}}</b>
+            </li>
+            <li class="card-list--li">
+              <div class="card--label">{{'tvLicencetypeLbl' | translate}}</div>
+              <b class="card--value">{{tvLicenceType}}</b>
+            </li>
+            <li class="card-list--li">
+              <div class="card--label">{{'tvLicencerecieveLbl' | translate}}</div>
+              <b class="card--value">{{recieveTvLicence}}</b>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card cardborder-white">
+        <div class="title-with-img">
+          <label class="card--head">{{'dashboard.payDetailsHeading' | translate}}</label>
+          <div class="card--img">
+            <div class="img-size">
+              <img src="assets/img/payment_details.png" class="img-full" alt="Payment Details"/>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <ul class="card-list">
+            <li class="card-list--li">
+              <div class="card--label">{{'dashboard.payMethodLbl' | translate}}</div>
+              <b class="card--value">{{paymnetMethod}}</b>
+            </li>
+            <li class="card-list--li">
+              <div class="card--label">{{'dashboard.payNextDateLbl' | translate}}</div>
+              <b class="card--value">{{nextPaymentDate}}</b>
+            </li>
+            <li class="card-list--li">
+              <div class="card--label">{{'dashboard.payNextAmountLbl' | translate}}</div>
+              <b class="card--value"><b class="currecny--space">£</b>{{nextPaymentAmount}}</b>
+            </li>
+          </ul>
+          <div class="card-btn">
+            <ul class="cardbtn-ul">
+              <li class="cardbtn-li">
+                <input type="button" class="btn-common" name="Make a payment" value="{{'dashboard.btnMakePay' | translate}}" routerLink="/pay"/>
+              </li>
+              <li class="cardbtn-li">
+                <input type="button" class="btn-common btn-active" name="Make a payment" value="{{'dashboard.btnViewMySchedule' | translate}}" routerLink="/pay/schedule"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card cardborder-white">
+        <div class="title-with-img">
+          <label class="card--head">{{'dashboard.myTvDetailsHeading' | translate}}</label>
+          <div class="card--img">
+            <div class="img-size">
+              <img src="assets/img/my_TV_licence.png" class="img-full" alt="My TV Licence"/>
+            </div>
+          </div>
+        </div>
+        <div class="card-details">
+          <p class="para-standard">
+            {{'dashboard.myTvParaBefore' | translate}}<a href="https://get.adobe.com/reader/?loc=uk" target="_blank" class="hyperLink--active">{{'barcode.adobeLink'|
+            translate}}</a><span>{{'dashboard.myTvParaAfter' | translate}}</span>
+          </p>
+          <div class="card-btn buttons">
+            <div class="buttons-div">
+              <input type="button" class="btn-common btn-active" name="View License" value="{{'dashboard.btnViewLicence' | translate}}" routerLink="/yourlicence"/>
+            </div>
+            <div class="buttons-div" [appHide]="['safari', 'ie', 'edge', 'opera']">
+              <input type="button" class="btn-common btn-active " name="Print License" value="{{'dashboard.btnPrintLicence' | translate}}" (click)="print()"/>
+            </div>
+            <div class="buttons-div">
+              <input type="button" class="btn-common btn-active" name="Download License" value="{{'dashboard.btnDownLoadLicence' | translate}}" (click)="download()"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-sm-12 col-md-12 accordion-custom">
+      <div class="col col-sm-12 col-md-4 accord accord-activemob">
+        <div class="accord-header" [appAccordion]="true">
+          <ul class="accord-ul">
+            <li class="accord-li"><img src="assets/img/tV _licence_details.png" class="acrdlft-img" alt="TV Licence Details"/></li>
+            <li class="accord-li"><label class="expand-head">
+              {{'dashboard.tvDetailsHeading' | translate}}
+            </label></li>
+            <li class="accord-li"><img src='{{imgPath}}' class="down-arrow img-full" alt="Down Arrow"/></li>
+          </ul>
+        </div>
+        <div class="accord-content show">
+          <div class="accord-block">
+            <div class="card-details">
+              <ul class="card-list">
+                <li class="card-list--li">
+                  <address class="address-paramob">
+                    <address>{{licenceHolderName}}</address>
+                    <address>{{addressLine1}}</address>
+                    <address>{{addressLine2}}</address>
+                    <address>{{addressLine3}}</address>
+                    <address>{{addressLine4}}</address>
+                    <address>{{addressLine5}}</address>
+                    <address>{{gqePostCode}}</address>
+                  </address>
+                </li>
+                <li class="card-list--li">
+                  <div class="card--label">{{'tvLicencenumberLbl' | translate}}</div>
+                  <b class="card--value">{{licenceNo}}</b>
+                </li>
+                <li class="card-list--li">
+                  <div class="card--label">{{'tvLicencefeeLbl' | translate}}</div>
+                  <b class="card--value"><b class="currecny--space">£</b>{{licenceFee}}</b>
+                </li>
+                <li class="card-list--li">
+                  <div class="card--label">{{'tvLicencevalidUntilLbl' | translate}}</div>
+                  <b class="card--value">{{validUntil}}</b>
+                </li>
+                <li class="card-list--li">
+                  <div class="card--label">{{'tvLicencetypeLbl' | translate}}</div>
+                  <b class="card--value">{{tvLicenceType}}</b>
+                </li>
+                <li class="card-list--li">
+                  <div class="card--label">{{'tvLicencerecieveLbl' | translate}}</div>
+                  <b class="card--value">{{recieveTvLicence}}</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-sm-12 col-md-4 accord ">
+        <div class="accord-header" [appAccordion]="true">
+          <ul class="accord-ul">
+            <li class="accord-li"><img src="assets/img/payment_details.png" class="acrdlft-img" alt="Payment Details"/></li>
+            <li class="accord-li"><label class="expand-head">
+              {{'dashboard.payDetailsHeading' | translate}}
+            </label></li>
+            <li class="accord-li"><img src='{{imgPath}}' class="down-arrow img-full" alt="Down Arrow"/></li>
+          </ul>
+        </div>
+        <div class="accord-content expand">
+          <div class="accord-block">
+            <div class="card-details">
+              <ul class="card-list">
+                <li class="card-list--li">
+                  <div class="card--label">{{'dashboard.payMethodLbl' | translate}}</div>
+                  <b class="card--value">{{paymnetMethod}}</b>
+                </li>
+                <li class="card-list--li">
+                  <div class="card--label">{{'dashboard.payNextDateLbl' | translate}}</div>
+                  <b class="card--value">{{nextPaymentDate}}</b>
+                </li>
+                <li class="card-list--li">
+                  <div class="card--label">{{'dashboard.payNextAmountLbl' | translate}}</div>
+                  <b class="card--value"><b class="currecny--space">£</b>{{nextPaymentAmount}}</b>
+                </li>
+              </ul>
+              <div class="card-btn">
+                <ul class="cardbtn-ul">
+                  <li class="cardbtn-li">
+                    <input type="button" class="btn-common" name="Make a payment" value="{{'dashboard.btnMakePay' | translate}}" routerLink="/pay"/>
+                  </li>
+                  <li class="cardbtn-li">
+                    <input type="button" class="btn-common btn-active" name="View" value="{{'dashboard.btnViewMySchedule' | translate}}" routerLink="/pay/schedule"/>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-sm-12 col-md-4 accord">
+        <div class="accord-header" [appAccordion]="true">
+          <ul class="accord-ul">
+            <li class="accord-li"><img src="assets/img/my_TV_licence.png" class="acrdlft-img" alt="My TV Licence"/></li>
+            <li class="accord-li"><label class="expand-head">
+              {{'dashboard.myTvDetailsHeading' | translate}}
+            </label></li>
+            <li class="accord-li"><img src='{{imgPath}}' class="down-arrow img-full" alt="Down Arrow"/></li>
+          </ul>
+        </div>
+        <div class="accord-content expand">
+          <div class="accord-block">
+            <div class="card-details">
+              <p>
+                {{'dashboard.myTvParaBefore' | translate}}<a href="https://get.adobe.com/reader/?loc=uk" target="_blank" class="hyperLink--active">{{'barcode.adobeLink'|
+                translate}}</a><span>{{'dashboard.myTvParaAfter' | translate}}</span>
+              </p>
+              <div class="buttons">
+                <div class="buttons-div">
+                  <input type="button" class="btn-common btn-active" name="View License" value="{{'dashboard.btnViewLicence' | translate}}" routerLink="/yourlicence"/>
+                </div>
+                <div class="buttons-div">
+                  <input type="button" class="btn-common btn-active" name="Download License" value="{{'dashboard.btnDownLoadLicence' | translate}}" (click)="download()"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

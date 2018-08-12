@@ -1,0 +1,495 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+
+td.text-center {
+    padding-top: 30px;
+}
+.thead--th {
+    width: 33.33%;
+    padding-left: 6%;
+}
+.tbody--td {
+    width: 33.33%;
+    padding-left: 6%;
+}
+.future--th {
+    width: 50%;
+    padding-left: 6%;
+}
+.future--td {
+    width: 33.33%;
+    padding-left: 6%;
+}
+.showimg{
+    display: block;
+}
+.hideimg{
+    display: none;
+}
+.schdeule--wrapper {
+    min-height: 645px;
+    padding: 0 15px;
+}
+.offboard-bottom {
+    text-align: center;
+    margin-top: 263px;
+}
+.offboard--heading {
+    font-size:$font-size-22;
+    font-family: $font-gotham-bold;
+    color: $color-blue-standard;
+    font-weight: 700;
+    width: 80%;
+    float: left;
+
+}
+.offboard--headimg {
+    float: right;
+}
+.schedule-container {
+    background: $color-white;
+    min-height: 185px;
+    padding: 10px 15px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.schedule--ul {
+    display: flex;
+    background: #f4f6f9;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+.schedule--li {
+    padding: 10px 0;
+    margin-left: 0px;
+    display: inline-block;
+    width: 28.33%;
+    &:nth-child(2){
+            width: 34.33%;
+    }
+    &:nth-child(3){
+        width: 40.33%;
+    }
+}
+
+.card--label {
+    color: $color-grey-medium;
+    font-size: $font-size-12;
+    font-family: $font-gotham-book;
+    padding: 0 5px;
+    width: 65%;
+    vertical-align: top;
+    text-align: right;
+}
+.card--value {
+    font-size: $font-size-14;
+    color: $color-black-dark;
+    font-family:$font-gotham-bold;
+    font-weight: 700;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+.pdng--0{
+    padding: 0;
+  }
+  .mrgn--0{
+    margin: 0;
+  }
+  .border-solid--bottom {
+    border-bottom: 1px solid #dcedcb;
+    padding-bottom: 10px;
+}
+
+.offboard--innertxt {
+    font-size: $font-size-14;
+    font-family: $font-gotham-bold;
+    font-weight: 700;
+    text-align: left;
+    margin: 20px 0;
+    color: $color-black-dark;
+}
+.offboard-innerpara {
+    text-align: left;
+    font-size: $font-size-14;
+    font-family: $font-gotham-book;
+    font-weight: normal;
+}
+.offboard-btn {
+    text-align: center;
+    margin: 80px 0;
+}
+.offboard-bottompara {
+    font-size: $font-size-14;
+    font-family: $font-gotham-book;
+    color:$color-black-dark;
+}
+.link-arrow {
+    color: $color-blue-standard;
+    font-size: $font-size-14;
+    font-family: $font-gotham-book;
+    text-decoration: underline;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+    .ofgt-arrow {
+        color: #004b6d;
+        font-size: 14px;
+    }
+    .payhistory-container {
+        padding: 0 0;
+        margin-top: 20px;
+    }
+    .pay--header{
+        @include padding-top(10px);
+    }
+    .value--color {
+    color: $color-red-standard !important;
+}
+.trans--label {
+    font-size: 14px;
+    color: #1e1e1e;
+    font-family: $font-gotham-bold;
+    font-weight: 700;
+    padding: 0 5px;
+}
+.pay--action {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    //*************************accordion customise css*****************//
+
+
+   //************************accordion css***********************//
+
+.payhistory-container{
+    .accord{
+        border: 1px solid rgba(0,0,0,.125);
+    }
+}
+.accord-header{
+    background: #fff;
+    padding: 10px 5px;
+}
+.accord{
+    margin-bottom: 10px;
+    background: #fff;
+}
+.inner-payimg {
+    width: 20px;
+    cursor: pointer;
+}
+
+.expand{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+
+.acrdlft-img {
+    width: 20px;
+    vertical-align: top;
+    padding-top: 3px;
+}
+.accord-block {
+    background: $color-white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.table .thead-light th {
+    background-color: #f4f6f9;
+    border-color: #dee2e6;
+}
+.table thead th {
+    vertical-align: bottom;
+    border: 0 none;
+    color: $color-black-dark;
+    font-size: $font-size-14;
+    font-family: $font-gotham-bold;
+    font-weight: 700;
+}
+.table td{
+    color: $color-black-dark;
+    font-size: $font-size-14;
+    font-family: $font-gotham-book;
+}
+.card--label{
+    color: $color-black-dark;
+    display: inline-block;
+    font-size: $font-size-14;
+}
+.collapse {
+    display: block !important;
+}
+.anchor--div{
+  display: block;
+}
+    //*****************end css **************************//
+
+
+    //***********************for media query*****************//
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+        .schedule--ul {
+            display: flex;
+        }
+        .schedule--li {
+            padding: 10px 10px;
+            margin-left: 0;
+            width: 100% !important;
+        }
+        .card--label{
+            display: flex;
+            padding: 5px 0px;
+            text-align: left;
+            min-height: 95px;
+        }
+        .footer--bg{
+            background: initial;
+        }
+        .footer-abs{
+            background: initial;
+        }
+        .footer-ul {
+            text-align: center;
+        }
+        .footer-li{
+            width: 85%;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+        .footer-simple {
+            width: 85px;
+            margin: 0 0 0 10px;
+        }
+      
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+       .schedule--ul {
+            display: flex;
+        }
+        .schedule--li {
+            padding: 10px 10px;
+            margin-left: 0;
+            width: 100% !important;
+        }
+        .card--label{
+            display: flex;
+            padding: 5px 0px;
+            text-align: left;
+            min-height: 95px;
+        }
+        .footer--bg{
+            background: initial;
+        }
+        .footer-abs{
+            background: initial;
+        }
+        .footer-ul {
+            text-align: center;
+        }
+        .footer-li{
+            width: 85%;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+        .footer-simple {
+            width: 85px;
+            margin: 0 0 0 10px;
+        }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+        .schedule--ul {
+            display: flex;
+        }
+        .schedule--li {
+            padding: 10px 10px;
+            margin-left: 0;
+            width: 100% !important;
+        }
+        .card--label{
+            display: flex;
+            padding: 5px 0px;
+            text-align: left;
+            min-height: 95px;
+        }
+        .footer--bg{
+            background: initial;
+        }
+        .footer-abs{
+            background: initial;
+        }
+        .footer-ul {
+            text-align: center;
+        }
+        .footer-li{
+            width: 85%;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+        .footer-simple {
+            width: 85px;
+            margin: 0 0 0 10px;
+        }
+}
+
+/* ----------- iPhone 6 ----------- */
+@media screen and (min-width:320px) and (max-width:375px){
+    .table td, .table th{
+        padding: 5px 8px 5px 6px;
+    }
+    .table thead th{
+        font-size: 12px;
+    }
+    .table td {
+        font-size: 12px;
+    }
+    .accord-block{
+        padding: 2px;
+    }
+
+       .schdeule--wrapper{
+           display: block;
+       }
+        .schedule--ul {
+            display: flex;
+        }
+        .schedule--li {
+            padding: 10px 4px;
+            margin-left: 0;
+            width: 100% !important;
+        }
+        .card--label{
+            display: flex;
+            padding: 5px 0px;
+            text-align: left;
+            min-height: 95px;
+        }
+        .footer--bg{
+            background: initial;
+        }
+        .footer-abs{
+            background: initial;
+        }
+        .footer-ul {
+            text-align: center;
+        }
+        .footer-li{
+            width: 85%;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+        .footer-simple {
+            width: 85px;
+            margin: 0 0 0 10px;
+        }
+
+    }
+    @media screen and (min-width:376px) and (max-width:767px){
+        .schdeule--wrapper{
+           display: block;
+       }
+        .schedule--ul {
+            display: flex;
+        }
+        .schedule--li {
+            padding: 10px 4px;
+            margin-left: 0;
+            width: 100% !important;
+        }
+        .card--label{
+            display: flex;
+            padding: 5px 0px;
+            text-align: left;
+            min-height: 95px;
+        }
+        .footer--bg{
+            background: initial;
+        }
+        .footer-abs{
+            background: initial;
+        }
+        .footer-ul {
+            text-align: center;
+        }
+        .footer-li{
+            width: 85%;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+        .footer-simple {
+            width: 85px;
+            margin: 0 0 0 10px;
+        }
+
+    }
+
+@media screen and (min-width:960px) and (max-width:1024px) {
+    //body { font-weight:bold; color:#555; }
+}
+
+
+
+  @media screen and (min-width:768px) and (max-width:959px) {
+    .footer-simple{
+        width: 84px;
+        margin: 0 auto;
+        margin-right: 10px;
+    }
+    .footer-anchor{
+        font-size: 12px;
+    }
+    .footer-li{
+        padding: 1px;
+    }
+    .icon-username {
+        font-size: 12px;
+    }
+    .footer-logmob {
+        padding-top: 10px;
+    }
+    .footer-logo{
+        width: 123px;
+        margin-top: 10px;
+        margin-left: -20px;
+    }
+    .card--label{
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:959px) {
+
+
+}
+
+@media screen and (min-width:960px) and (max-width:1024px) {
+
+}

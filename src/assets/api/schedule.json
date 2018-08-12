@@ -1,0 +1,133 @@
+{
+	"id": "Account Payments",
+	"fields": [
+		{
+			"code": "GQE_LICENCE_COVER_START_MONTH_YEAR",
+			"label": "Licence Cover Start Month-Year",
+			"value": "March 2018",
+			"formattedValue": "March 2018",
+			"type": "field"
+		},
+		{
+			"code": "GQE_LICENCE_EXPIRY_MONTH_YEAR",
+			"label": "Licence Expiry Date",
+			"value": "February 2019",
+			"formattedValue": "February 2019",
+			"type": "field"
+		}
+	],
+	"tables": [{
+			"id": "Historic Payments",
+			"headingRow": [{
+					"index": 0,
+					"value": "Payment Date",
+					"formattedValue": "Payment Date"
+				},
+				{
+					"index": 1,
+					"value": "Payment Narrative",
+					"formattedValue": "Payment Narrative"
+				},
+				{
+					"index": 2,
+					"value": "Payment Amount",
+					"formattedValue": "Payment Amount"
+				}
+			],
+			"tableRows": [{
+					"index": 1,
+					"columns": [{
+							"index": 0,
+							"value": "20180201",
+							"formattedValue": "01/02/2018",
+							"type": "fieldDate8"
+						},
+						{
+							"index": 1,
+							"value": "Direct Debit",
+							"formattedValue": "Direct Debit",
+							"type": "field"
+						},
+						{
+							"index": 2,
+							"value": "12.25",
+							"formattedValue": "12.25",
+							"type": "field"
+						}
+					]
+				},
+				{
+					"index": 2,
+					"columns": [{
+							"index": 0,
+							"value": "20180101",
+							"formattedValue": "01/01/2018",
+							"type": "fieldDate8"
+						},
+						{
+							"index": 1,
+							"value": "Direct Debit",
+							"formattedValue": "Direct Debit",
+							"type": "field"
+						},
+						{
+							"index": 2,
+							"value": "12.45",
+							"formattedValue": "12.45",
+							"type": "field"
+						}
+					]
+				}
+			],
+			"footerRow": null
+		},
+		{
+			"id": "Future Payment Schedule",
+			"headingRow": [{
+					"index": 0,
+					"value": "Payment Date",
+					"formattedValue": "Payment Date"
+				},
+				{
+					"index": 1,
+					"value": "Payment Amount",
+					"formattedValue": "Payment Amount"
+				}
+			],
+			"tableRows": [{
+					"index": 1,
+					"columns": [{
+							"index": 0,
+							"value": "20180301",
+							"formattedValue": "01/03/2018",
+							"type": "fieldDate8"
+						},
+						{
+							"index": 1,
+							"value": "12.25",
+							"formattedValue": "12.25",
+							"type": "field"
+						}
+					]
+				},
+				{
+					"index": 2,
+					"columns": [{
+							"index": 0,
+							"value": "20180401",
+							"formattedValue": "01/04/2018",
+							"type": "fieldDate8"
+						},
+						{
+							"index": 1,
+							"value": "12.25",
+							"formattedValue": "14.45",
+							"type": "field"
+						}
+					]
+				}
+			],
+			"footerRow": null
+		}
+	]
+}

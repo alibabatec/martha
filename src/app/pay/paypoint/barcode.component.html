@@ -1,0 +1,21 @@
+<div class="container margin__top--50 margin__bottom--50">
+  <div class="content">
+    <div class="row" #toPDF>
+      <div class="col-9 col-md-10 card--head"><p class="paypoint--head">{{'barcode.heading'| translate}}</p></div>
+      <div class="col-3 col-md-2 allign--right"><img src="assets/img/paypoint.png" alt="" width="40" height="30"></div>
+      <div class="borderBottom"></div>
+    </div>
+    <p class="message margin__top--20 margin__bottom--50">{{'barcode.headSmall'| translate}}</p>
+    <div class="text-center" #barcode>
+      <!--<img class="img-fluid" [src]="barCode" alt="">-->
+      <ngx-barcode [bc-value]="licenceNo" [bc-width]="1.5" [bc-display-value]="true"></ngx-barcode>
+      <img [hidden]="true" crossorigin="anonymous" id="dummyImage" src="" width="800" height="600" />
+    </div>
+  </div>
+  <p class="message margin__top--20 margin__bottom--50">{{'barcode.para1'| translate}}<a href="https://get.adobe.com/reader/?loc=uk" target="_blank" class="hyperLink--active">{{'barcode.adobeLink'| translate}}</a>, <span>{{'barcode.paraSubsequent'| translate}}</span></p>
+  <div class="action margin__top--50 padding__bottom--50 licence-btn">
+    <button class="btn-common btn-active" name="download" (click)="download()">{{'barcode.btnDownload'| translate}}</button>
+    <button [appHide]="['safari', 'ie', 'edge']" class="btn-common margin-left-10 visibility" name="print" (click)="print()">{{'barcode.btnPrint'| translate}}</button>
+  </div>
+  <p class="message margin__top--20 margin__bottom--50 allign--center">{{'barcode.para2'| translate}}<a href="https://www.paypoint.com/en-gb/consumers/store-locator" target="_blank" class="hyperLink--active">{{'barcode.locatorLink'| translate}}</a>.</p>
+</div>

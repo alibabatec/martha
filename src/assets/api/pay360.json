@@ -1,0 +1,27 @@
+{
+  "id": "Pay360Details",
+  "fields": [
+    {
+      "code": "GQE_PAY360_MERCHANT_ID",
+      "label": "Pay360 Merchant Id",
+      "value": "bbcspp01",
+      "formattedValue": "bbcspp01",
+      "type": "field"
+    },
+    {
+      "code": "GQE_PAY360_REMOTE_PASSWORD",
+      "label": "Pay360 Remote Password",
+      "value": "t4rg3tspp",
+      "formattedValue": "t4rg3tspp",
+      "type": "field"
+    },
+    {
+      "code": "GQE_PAY360_TEMPLATE",
+      "label": "Pay360 Template",
+      "value": "https://www.secpay.com/users/bbcspp01/SPP.html",
+      "formattedValue": "https://www.secpay.com/users/bbcspp01/SPP.html",
+      "type": "field"
+    }
+  ],
+  "tables": []
+}

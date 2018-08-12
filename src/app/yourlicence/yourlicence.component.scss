@@ -1,0 +1,194 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+@import "./src/scss/font";
+
+.content-container {
+  background: $color-white;
+  border-bottom: 2px solid #d3e8ba;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-height: 520px;
+  width: 100%;
+}
+
+.view-licence-content {
+  font-family: $font-gotham-book;
+  padding: 5px;
+  position: relative;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+.view-licence-title {
+  background-color: #b1ced6;
+  border-bottom: 1px solid #dcedcb;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: table;
+  padding: 10px 10px 10px 25px;
+  width: 100%;
+}
+
+.view-licence-image {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+}
+
+.view-licence-head {
+  color: #1f1d20;
+  display: inline-block;
+  font-size: $font-size-24;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  padding-top: 7px;
+  width: 80%;
+}
+
+.address {
+  color: $color-black-dark;
+  font-size: $font-size-14;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  margin: 0 0 5px;
+  padding: 25px;
+  width: 18%;
+}
+
+.licence-details {
+  background-color: #09414e;
+  font-size: $font-size-14;
+  width: 100%;
+}
+
+.input-container {
+  border-bottom: 1px solid #072f37;
+}
+
+.input-label {
+  color: #ffffff;
+  font-size: $font-size-14;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  margin: 0px;
+  padding-top: 6px;
+  padding-left: 25px;
+}
+
+.input-box {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+
+.input-box-text {
+  color: #1e1e1e;
+  font-size: $font-size-14;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  padding-left: 8px;
+}
+
+.licence-text {
+  color: #1d1d1d;
+  font-family: $font-gotham-book;
+  font-size: $font-size-14;
+  margin: 30px 25px;
+  text-align: left;
+}
+
+.licence-btn {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-common {
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  font-size: $font-size-16;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.padding {
+  padding: 7px 0;
+}
+
+.hide {
+  visibility: hidden;
+}
+ address {
+    margin: 0;
+    line-height: 22px;
+    font-family: $font-gotham-bold;
+    font-weight: 700;
+}
+.address-para {
+    padding: 10px 25px;
+}
+//**************for pdf format start************//
+  .terms--bold {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: verdana;
+    margin: 10px 0;
+    color: #1e1e1e;
+}
+  .normaltext--pdf {
+    font-family: verdana;
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1e1e1e;
+}
+  .edge--fromat--li {
+    list-style: disc;
+    margin: 10px 17px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: verdana;
+    color: #1e1e1e;
+}
+//**************for pdf format end************//
+
+//***********************for media query*****************************//
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .view-licence-head {
+    width: 75%;
+  }
+  .view-licence-content {
+    margin-top: 20px;
+  }
+  .address {
+    width: 60%;
+  }
+  .visibility{
+    visibility: hidden;
+  }
+  .input-label {
+    padding-left: 15px;
+  }
+  .address {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .view-licence-title {
+    padding-left: 15px;
+  }
+  .licence-text {
+    margin-left: 15px;
+  }
+  .input-box {
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media screen and (min-width: 960px) and (max-width: 1366px) {
+}

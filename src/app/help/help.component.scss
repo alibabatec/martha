@@ -1,0 +1,59 @@
+@import "./src/scss/config";
+@import "./src/scss/mixins";
+@import "./src/scss/font";
+.marginTop50{
+  margin-top: 30px;
+}
+.faqContent{
+  min-height: 768px;
+  //max-width: 960px;
+  padding: 5px;
+  z-index: 1;
+  position: relative;
+}
+.faq-title {
+  border-bottom: 1px solid #dcedcb;
+  padding-bottom: 2px;
+  padding-top: 5px;
+}
+.faq-image{
+  vertical-align: middle;
+  float: right;
+  padding-right: 5px;
+}
+.faq-image img{
+  width:50px;
+}
+.faq-head{
+  display: inline-block;
+  width: 62%;
+  margin-top: 5px;
+  color: $color-blue-standard;
+  font-size: $font-size-22;
+  font-family: $font-gotham-bold;
+  font-weight: 700;
+  padding-left: 5px;
+}
+.content{
+  padding: 0 10px;
+}
+
+.contactus a, .licence a{
+  text-decoration: underline;
+  color: #105576;
+  font-weight: 600;
+}
+.contactus b, .licence b{
+  color: $color-blue-standard;
+}
+.line-break {
+  white-space: pre-line;
+}
+.margin__btm--20{
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+      .container__mrg--top{
+  margin-bottom: 20px;
+}
+}
